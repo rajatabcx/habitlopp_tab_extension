@@ -2,7 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    height: 400px;
-    width: 400px;
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+.patrick {
+    font-family: 'Patrick Hand', cursive;
+}
+
+.paper-button {
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    transition: all 235ms ease-in-out 0s;
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    padding: 0.75rem;
+    border-color: black;
+    box-shadow: 15px 28px 25px -18px rgba(0, 0, 0, 0.2);
+}
+
+.paper-button:hover {
+    transform: translate3d(0, 2px, 0);
+    box-shadow: 2px 8px 8px -5px rgba(0, 0, 0, 0.3);
+}
+
+.border {
+    border-radius: 255px 15px 225px 15px / 15px 255px 15px;
+    border: 2px solid #41403e;
+}
+
+.card {
+    transform-style: preserve-3d;
+}
+
+.front {
+    transform: rotateY(180deg);
+    line-height: 110px;
+    text-emphasis: none;
+}
+
+.back {
+    font-size: 50px;
+    line-height: 120px;
+    cursor: pointer;
+    color: #6d1124;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card.matched {
+    transform: rotateY(180deg);
+}
+
+.card.matched .front {
+    animation: selected 0.8s 0s ease 1;
+    animation-fill-mode: both;
+
+}
+
+
+@keyframes selected {
+    0% {
+        opacity: 0.2;
+    }
+
+    30% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+
+    70% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
 }
