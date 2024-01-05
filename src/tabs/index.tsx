@@ -5,6 +5,7 @@ import Doodle from './components/Doodle';
 import TicTacToe from './components/TicTacToe';
 import CardFlip from './components/CardFlip';
 import Hangman from './components/Hangman';
+import SimonSays from './components/SimonSays';
 
 const allComps = [
   <CanvasProvider>
@@ -13,6 +14,7 @@ const allComps = [
   <TicTacToe />,
   <CardFlip />,
   <Hangman />,
+  <SimonSays />,
 ];
 
 function init() {
@@ -23,7 +25,7 @@ function init() {
     throw new Error('Can not find AppContainer');
   }
   const root = createRoot(appContainer);
-  root.render(<Hangman />);
+  root.render(<SimonSays />);
 }
 
 init();

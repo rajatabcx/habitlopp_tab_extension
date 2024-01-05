@@ -67,6 +67,19 @@
 
 }
 
+.pad {
+    border-radius: 320px 20px 20px;
+    transition: all 0.3s;
+}
+
+.score-pad {
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 15px;
+}
+
+.pad:hover {
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 15px;
+    scale: 1.02;
+}
 
 @keyframes selected {
     0% {

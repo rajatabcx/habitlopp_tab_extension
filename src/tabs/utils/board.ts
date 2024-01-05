@@ -86,3 +86,15 @@ export default class Board {
     return new Board(this.grid.concat());
   };
 }
+
+export const sleep = async (time: number) => {
+  return new Promise((res) => {
+    setTimeout(() => {
+      res('sleep done');
+    }, time);
+  });
+};
+
+export const SONG_DELAY_TIME = 200;
+export const REDUCED_DELAY_TIME = SONG_DELAY_TIME - 100;
+export const NEXT_LEVEL_DELAY_TIME = 500;
